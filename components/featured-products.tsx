@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation"
 const FeaturedProducts = () => {
     const { loading, result }: ResponseType = useGetFeaturedProducts()
     const router = useRouter()
+    console.log(result)
 
     return (
         <div className="max-w-6xl py-4 mx-auto sm:py-6 sm:px-24">
@@ -24,7 +25,6 @@ const FeaturedProducts = () => {
                 )}
                 {result !== null && (
                     result.data.map((product: ProductType) => {
-                        // console.log(`${process.env.NEXT_PUBLIC_BACKEND_URL}${product.images[0].url}`)
                         return (
                             <CarouselItem key={product.id} className="md:basis-1/2 lg:basis-1/3 group">
                                 <div className="p-1">

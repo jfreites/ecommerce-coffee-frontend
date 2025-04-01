@@ -7,7 +7,6 @@ type SkeletonSchemaProps = {
 const SkeletonSchema = (props: SkeletonSchemaProps) => {
     return (
         Array.from({ length: props.grid }).map(() => (
-            // eslint-disable-next-line react/jsx-key
             <div className="flex flex-col gap-8 mx-auto space-y-3">
                 <Skeleton className="h-[125px] w-[250px] rounded-xl" />
                 <div className="space-y-2">
