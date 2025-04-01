@@ -1,13 +1,15 @@
 'use client';
 
-import { Heart, ShoppingCart, User } from "lucide-react";
+import { BaggageClaim, Divide, Heart, ShoppingCart, User } from "lucide-react";
 import { useRouter } from "next/navigation";
 import MenuList from "./menu-list";
 import ItemsMenuMobile from "./items-menu-mobile";
 import ToggleTheme from "./toggle-theme";
+import { useCart } from "@/hooks/use-cart";
 
 const Navbar = () => { 
-    const router = useRouter();
+    const router = useRouter()
+    const { items } = useCart()
 
     return (
         <div className="flex items-center justify-between mx-auto p-4 cursor-pointer sm:max-w-4xl md:max-w-6xl">
@@ -21,11 +23,18 @@ const Navbar = () => {
                 <ItemsMenuMobile />
             </div>
             <div className="flex items-center justify-between gap-2 sm:gap-7">
+                {items.length === 0 ? 
                 <ShoppingCart 
                     strokeWidth="1"
                     className="cursor-pointer" 
                     onClick={() => router.push('/cart')} 
                 />
+                : (
+                    <div className="flex gap-1" onClick={() => router.push('/cart')}>
+                        <BaggageClaim strokeWidth={1} className="cursor-pointer" />
+                        <span>{items.length}</span>
+                    </div>
+                )}
 
                 <Heart 
                     strokeWidth="1"
