@@ -11,8 +11,8 @@ const Navbar = () => {
 
     return (
         <div className="flex items-center justify-between mx-auto p-4 cursor-pointer sm:max-w-4xl md:max-w-6xl">
-            <h1 className="text-3xl" onClick={() => router.push('/')}>Ecom
-                <span className="font-bold">Coffee</span>
+            <h1 className="text-3xl" onClick={() => router.push('/')}>Cofi
+                <span className="font-bold">Shop</span>
             </h1>
             <div className="items-center justify-between hidden sm:flex">
                 <MenuList />

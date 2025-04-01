@@ -50,11 +50,10 @@ const MenuList = () => {
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      Ecomm Coffee
+                      CofiShop
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
+                      Tu tienda de confianza para obtener el café más premium de varias partes del mundo.
                     </p>
                   </a>
                 </NavigationMenuLink>

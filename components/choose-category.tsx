@@ -1,6 +1,6 @@
 'use client'
 
-import { useGetCategories } from '@/api/getProducts'
+import { useGetCategories } from '@/api/getCategories'
 import { CategoryType } from '@/types/category'
 import { ResponseType } from '@/types/response'
 import Link from 'next/link'

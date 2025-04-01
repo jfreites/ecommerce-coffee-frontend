@@ -29,7 +29,7 @@ const Footer = () => {
         <footer className="mt-4">
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <p><span className="font-bold">EcommCoffee</span> Online Premium Shop</p>
+                    <p><span className="font-bold">CofiShop</span> Online Premium Shop</p>
                     <ul className="flex flex-wrap items0center mb-6 text-md font-medium text-gray-500 sm:mb-0 sm:mt-0">
                         {dataFooter.map((item) => (
                             <li key={item.id}>
@@ -43,7 +43,7 @@ const Footer = () => {
                 <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
                     &copy; 2025{" "}
                     <Link href="/" className="hover:underline">
-                        EcommCoffee
+                        CofiShop
                     </Link>. Todos los derechos reservados.
                 </span>
             </div>
